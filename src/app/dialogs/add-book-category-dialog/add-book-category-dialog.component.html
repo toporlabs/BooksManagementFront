@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Add Book Category</h1>
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput type="text" formControlName="name">
+      <mat-error *ngIf="formGroup.controls.name.invalid">Name cannot be empty</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button type="submit">Add</button>
+  </div>
+</form>
